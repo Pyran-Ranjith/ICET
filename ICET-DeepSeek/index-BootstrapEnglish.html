@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICET Computer Institute</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --accent-color: #ffc107;
+            --light-bg: #f8f9fa;
+            --dark-bg: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 30px;
+        }
+        
+        .course-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            height: 100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .course-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            border-radius: 10px 10px 0 0 !important;
+        }
+        
+        .highlight-box {
+            background-color: rgba(13, 110, 253, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .instructor-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .instructor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .instructor-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light-bg);
+            margin: 0 auto 15px;
+        }
+        
+        .footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-bg);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .display-4 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-laptop-code me-2"></i>ICET Computer Institute
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#instructors">Instructors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#register" class="btn btn-primary ms-lg-3">Register Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center" id="home">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Advance Your IT Career With ICET</h1>
+            <p class="lead mb-5">Professional IT courses designed for school students, university students, and working professionals</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#courses" class="btn btn-primary btn-lg px-4">Explore Courses</a>
+                <a href="#register" class="btn btn-outline-light btn-lg px-4">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Welcome to ICET Computer Institute</h2>
+                    <p class="lead">We offer comprehensive IT education with practical applications to prepare you for the modern workforce.</p>
+                    <p>Our institute is registered with WC 1191 and has been providing quality IT education to students across Sri Lanka.</p>
+                    <div class="highlight-box">
+                        <h5><i class="fas fa-check-circle me-2"></i>Why Choose ICET?</h5>
+                        <ul class="mb-0">
+                            <li>5 main diploma and certificate programs</li>
+                            <li>Practical IT skills development</li>
+                            <li>Experienced instructors</li>
+                            <li>Flexible online learning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c811329a7274?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Computer Class" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light" id="features">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Key Features</h2>
+                <p class="lead text-muted">What makes ICET the best choice for your IT education</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </div>
+                        <h4>Online Learning</h4>
+                        <p>All courses available online with live lectures and recorded sessions for flexible learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Expert Instructors</h4>
+                        <p>Learn from industry professionals with real-world experience and academic qualifications.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Affordable Fees</h4>
+                        <p>Quality education at reasonable prices with flexible payment options available.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Certification</h4>
+                        <p>Receive recognized certificates upon course completion to boost your career.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>Practical Skills</h4>
+                        <p>Focus on hands-on training with real business applications and projects.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4>Bilingual Medium</h4>
+                        <p>Courses available in both English and Sinhala for better understanding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="py-5" id="courses">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Courses</h2>
+                <p class="lead text-muted">Comprehensive IT programs for all levels</p>
+            </div>
+            
+            <ul class="nav nav-pills mb-4 justify-content-center" id="course-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="diploma-tab" data-bs-toggle="pill" data-bs-target="#diploma" type="button">Diploma</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="certificate-tab" data-bs-toggle="pill" data-bs-target="#certificate" type="button">Certificate</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="university-tab" data-bs-toggle="pill" data-bs-target="#university" type="button">University</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="course-tabs-content">
+                <div class="tab-pane fade show active" id="diploma" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Diploma in Microsoft Office
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Ms Excel</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Ms Word</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Ms Power point</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Ms Access</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Database Management</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Windows</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Internet/E mail</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Diploma in Computerized Accounting
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>M.Y.O.B</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Quick Book</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Accpac</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Practical Accounting</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Financial Reports</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Diploma in Graphic Design
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Adobe Photoshop</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Adobe Illustrator</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Adobe InDesign</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Logo Design</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Print Media</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="certificate" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Certificate in Artificial Intelligence
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Fee: Rs. 100 (Practical)</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>AI Fundamentals</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>100 Business Applications</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Python for AI</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Machine Learning Basics</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Certificate in Web Development
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>HTML5 & CSS3</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>JavaScript</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Bootstrap</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Responsive Design</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Certificate in Python Programming
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Python Basics</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Data Structures</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>OOP Concepts</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Practical Projects</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="university" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    IT for Pre-University Students
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Duration: 7 months (Rs. 1,400 total)</h5>
+                                    <p>First time in Sri Lanka - specially designed for university students</p>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Business Management</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Data Science</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Software Engineering</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Computer Science</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Business Information Systems</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="course-card card">
+                                <div class="card-header">
+                                    Advanced Programming
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Duration: 6 months (Rs. 2,000/month)</h5>
+                                    <ul class="list-group list-group-flush mb-3">
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Java Programming</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Advanced Python</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Database with SQL</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Web Development</li>
+                                    </ul>
+                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="py-5 bg-light" id="instructors">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Expert Instructors</h2>
+                <p class="lead text-muted">Learn from industry professionals</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="instructor-card">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor" class="instructor-img">
+                        <h4>Dhanmika Jayawardana</h4>
+                        <p class="text-muted">Asst. General Manager IT – Ceylinco Center</p>
+                        <p>15+ years of industry experience in enterprise IT solutions</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="instructor-card">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor" class="instructor-img">
+                        <h4>Dinali Jayawardana</h4>
+                        <p class="text-muted">PhD Computer Science University of Bowie (USA)</p>
+                        <p>Specializes in AI, Machine Learning and Data Science</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="instructor-card">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Instructor" class="instructor-img">
+                        <h4>Oshani Jayawardana</h4>
+                        <p class="text-muted">B.Sc. (Hons) Computer Science University of Westminster (UK)</p>
+                        <p>Expert in Web Development and Software Engineering</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-codepen"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="py-5" id="register">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">Course Registration</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="registrationForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="course" class="form-label">Select Course</label>
+                                        <select class="form-select" id="course" required>
+                                            <option value="" selected disabled>Choose a course</option>
+                                            <option value="diploma_office">Diploma in Microsoft Office</option>
+                                            <option value="diploma_accounting">Diploma in Computerized Accounting</option>
+                                            <option value="diploma_design">Diploma in Graphic Design</option>
+                                            <option value="certificate_ai">Certificate in Artificial Intelligence</option>
+                                            <option value="certificate_web">Certificate in Web Development</option>
+                                            <option value="certificate_python">Certificate in Python Programming</option>
+                                            <option value="university_it">IT for Pre-University Students</option>
+                                            <option value="advanced_programming">Advanced Programming</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Additional Information</label>
+                                        <textarea class="form-control" id="message" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                            <label class="form-check-label" for="agreeTerms">
+                                                I agree to the terms and conditions
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Submit Registration</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 bg-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Contact Us</h2>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-map-marker-alt me-2 text-primary"></i>Location</h5>
+                        <p>ICET Computer Institute, Registered No WC 1191</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-phone me-2 text-primary"></i>Phone</h5>
+                        <p>Hotline: 0775009455 / 0763832189 / 0703446751</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-envelope me-2 text-primary"></i>Email</h5>
+                        <p>info@icet500.net</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-globe me-2 text-primary"></i>Website</h5>
+                        <p>icet500.net</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Send us a message</h3>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="contactName" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="contactName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactEmail" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="contactEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactSubject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="contactSubject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label">Message</label>
+                                    <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">ICET Computer Institute</h4>
+                    <p>Providing quality IT education since 2010. Registered No WC 1191.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="#courses" class="text-white">Courses</a></li>
+                        <li class="mb-2"><a href="#features" class="text-white">Features</a></li>
+                        <li class="mb-2"><a href="#instructors" class="text-white">Instructors</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Newsletter</h4>
+                    <p>Subscribe to get updates on new courses and offers.</p>
+                    <form id="newsletterForm">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 ICET Computer Institute. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Web: icet500.net</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form submission handling
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your registration! We will contact you soon.');
+            this.reset();
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+</body>
+</html>
