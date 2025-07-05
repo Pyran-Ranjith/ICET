@@ -28,12 +28,15 @@
         }
         
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); */
+            /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('add-2.png'); */
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 0;
-            margin-bottom: 30px;
+            /* padding: 100px 0; */
+            padding: 0 0;
+            /* margin-bottom: 30px; */
+            /* margin-bottom: 10px; */
         }
         
         .course-card {
@@ -160,12 +163,14 @@
         }
     </style>
 </head>
-<body>
+<body>        
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <i class="fas fa-laptop-code me-2"></i>ICET Computer Institute
+                <!-- <i class="fas fa-laptop-code me-2"></i>ICET Computer Institute -->
+                <h1><img src="icet-logo.jpg" alt="ICET Logo" width="60" height="60"></i> ICET Computer Institute</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -178,9 +183,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#courses">Courses</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#features">Features</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#instructors">Instructors</a>
                     </li>
@@ -194,14 +199,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section text-center" id="home">
+    <!-- <section class="hero-section text-center" id="home">
         <div class="container">
             <h1 class="display-4 fw-bold mb-4">Advance Your IT Career With ICET</h1>
+            <noscript><h1 class="display-4 fw-bold mb-4">ICET සමඟ ඔබේ තොරතුරු තාක්ෂණ වෘත්තිය ඉදිරියට ගෙන යන්න</h1></noscript>
             <p class="lead mb-5">Professional IT courses designed for school students, university students, and working professionals</p>
             <div class="d-flex justify-content-center gap-3">
                 <a href="#courses" class="btn btn-primary btn-lg px-4">Explore Courses</a>
                 <a href="#register" class="btn btn-outline-light btn-lg px-4">Register Now</a>
             </div>
+        </div>
+    </section> -->
+
+    <section class="hero-section text-center" id="home">
+        <div class="container">
+                    <img src="add-2.png" alt="Computer Class" class="img-fluid rounded shadow">
         </div>
     </section>
 
@@ -210,28 +222,29 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="fw-bold mb-4">Welcome to ICET Computer Institute</h2>
-                    <p class="lead">We offer comprehensive IT education with practical applications to prepare you for the modern workforce.</p>
-                    <p>Our institute is registered with WC 1191 and has been providing quality IT education to students across Sri Lanka.</p>
+                    <h2 class="fw-bold mb-4">ICET පරිගණක ආයතනයට සාදරයෙන් පිළිගනිමු</h2>
+                    <p class="lead">නවීන ශ්‍රම බලකායට ඔබව සූදානම් කිරීම සඳහා අපි ප්‍රායෝගික යෙදුම් සහිත පුළුල් තොරතුරු තාක්ෂණ අධ්‍යාපනයක් පිරිනමන්නෙමු.</p>
+                    <p>අපගේ ආයතනය WC 1191 සමඟ ලියාපදිංචි වී ඇති අතර ශ්‍රී ලංකාව පුරා සිසුන්ට ගුණාත්මක තොරතුරු තාක්ෂණ අධ්‍යාපනයක් ලබා දෙමින් සිටී.</p>
                     <div class="highlight-box">
-                        <h5><i class="fas fa-check-circle me-2"></i>Why Choose ICET?</h5>
-                        <ul class="mb-0">
-                            <li>5 main diploma and certificate programs</li>
-                            <li>Practical IT skills development</li>
-                            <li>Experienced instructors</li>
-                            <li>Flexible online learning</li>
+                        <noscript><h5><i class="fas fa-check-circle me-2"></i>ICET තෝරා ගන්නේ ඇයි?</h5></noscript>
+                        <h5><i class="fas fa-check-circle me-2"></i>පාඨමාලා 5ක් නොමිලේ.</h5>
+                      <ul class="mb-0">
+                            <li>රැකියාවක් සිහින මවන Course 01</li>
+                            <li>උපාධියක් සිහින මවන Course 02</li>
+                            <li>පාඨමාලා 2 ක් පමණක් හදැරීමට කැමති සිසුන්ට. Course 03</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c811329a7274?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Computer Class" class="img-fluid rounded shadow">
+                    <!-- <img src="https://images.unsplash.com/photo-1581094794329-c811329a7274?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Computer Class" class="img-fluid rounded shadow"> -->
+                    <img src="add.jpg" alt="Computer Class" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-5 bg-light" id="features">
+    <!-- <section class="py-5 bg-light" id="features">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Our Key Features</h2>
@@ -294,38 +307,41 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Courses Section -->
     <section class="py-5" id="courses">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Our Courses</h2>
+                <h2 class="fw-bold">Course Contents</h2>
                 <p class="lead text-muted">Comprehensive IT programs for all levels</p>
             </div>
             
             <ul class="nav nav-pills mb-4 justify-content-center" id="course-tabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="diploma-tab" data-bs-toggle="pill" data-bs-target="#diploma" type="button">Diploma</button>
+                    <button class="nav-link active" id="diploma-tab" data-bs-toggle="pill" data-bs-target="#diploma" type="button">Diploma Level</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="certificate-tab" data-bs-toggle="pill" data-bs-target="#certificate1" type="button">Certificate</button>
+                    <button class="nav-link" id="certificate-tab" data-bs-toggle="pill" data-bs-target="#certificate$" type="button">Certificate Level</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="university-tab" data-bs-toggle="pill" data-bs-target="#university" type="button">University</button>
+                    <button class="nav-link" id="university-tab" data-bs-toggle="pill" data-bs-target="#university$" type="button">University Level</button>
                 </li>
-            </ul>
+           </ul>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Course-1</h2>
+            </div>
             
             <div class="tab-content" id="course-tabs-content">
                 <div class="tab-pane fade show active" id="diploma" role="tabpanel">
                     <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="course-card card">
-                                <div class="card-header">
-                                    Diploma in Microsoft Office
+                                <div class="card-header" style="background-color: #6f42c1; color: white;">
+                                    Diploma in Microsoft Office (Business Applications)
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <!-- <h5 class="card-title">Course Fee: Rs. 450</h5> -->
                                     <ul class="list-group list-group-flush mb-3">
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Ms Excel</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Ms Word</li>
@@ -334,6 +350,7 @@
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Database Management</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Windows</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Internet/E mail</li>
+                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>InInformation Technology</li>
                                     </ul>
                                     <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
                                 </div>
@@ -345,15 +362,15 @@
                                     Diploma in Computerized Accounting
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <!-- <h5 class="card-title">Course Fee: Rs. 450</h5> -->
                                     <ul class="list-group list-group-flush mb-3">
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>M.Y.O.B</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Quick Book</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Accpac</li>
-                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Practical Accounting</li>
-                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Financial Reports</li>
+                                        <!-- <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Practical Accounting</li> -->
+                                        <!-- <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Financial Reports</li> -->
                                     </ul>
-                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                    <!-- <a href="#register" class="btn btn-primary w-100">Enroll Now</a> -->
                                 </div>
                             </div>
                         </div>
@@ -363,22 +380,22 @@
                                     Diploma in Graphic Design
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Course Fee: Rs. 450</h5>
+                                    <!-- <h5 class="card-title">Course Fee: Rs. 450</h5> -->
                                     <ul class="list-group list-group-flush mb-3">
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Adobe Photoshop</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Adobe Illustrator</li>
                                         <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Adobe InDesign</li>
-                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Logo Design</li>
-                                        <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Print Media</li>
+                                        <!-- <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Logo Design</li> -->
+                                        <!-- <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Print Media</li> -->
                                     </ul>
-                                    <a href="#register" class="btn btn-primary w-100">Enroll Now</a>
+                                    <!-- <a href="#register" class="btn btn-primary w-100">Enroll Now</a> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="tab-pane fade" id="certificate1" role="tabpanel">
+                <div class="tab-pane fade" id="certificate" role="tabpanel">
                     <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="course-card card">
@@ -488,8 +505,9 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="instructor-card">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor" class="instructor-img">
-                        <h4>Dhanmika Jayawardana</h4>
+                        <!-- <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor" class="instructor-img"> -->
+                        <img src="user-default.png" alt="Instructor" class="instructor-img">
+                 <h4>Dhanmika Jayawardana</h4>
                         <p class="text-muted">Asst. General Manager IT – Ceylinco Center</p>
                         <p>15+ years of industry experience in enterprise IT solutions</p>
                         <div class="social-icons">
@@ -500,7 +518,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="instructor-card">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor" class="instructor-img">
+                        <!-- <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor" class="instructor-img"> -->
+                        <img src="user-default.png" alt="Instructor" class="instructor-img">
                         <h4>Dinali Jayawardana</h4>
                         <p class="text-muted">PhD Computer Science University of Bowie (USA)</p>
                         <p>Specializes in AI, Machine Learning and Data Science</p>
@@ -512,7 +531,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="instructor-card">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Instructor" class="instructor-img">
+                        <!-- <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Instructor" class="instructor-img"> -->
+                        <img src="user-default.png" alt="Instructor" class="instructor-img">
                         <h4>Oshani Jayawardana</h4>
                         <p class="text-muted">B.Sc. (Hons) Computer Science University of Westminster (UK)</p>
                         <p>Expert in Web Development and Software Engineering</p>
@@ -608,7 +628,7 @@
                     </div>
                     <div class="mb-4">
                         <h5><i class="fas fa-globe me-2 text-primary"></i>Website</h5>
-                        <p>icet500.net</p>
+                        <!-- <p>icet500.net</p> -->
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -660,7 +680,7 @@
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#home" class="text-white">Home</a></li>
                         <li class="mb-2"><a href="#courses" class="text-white">Courses</a></li>
-                        <li class="mb-2"><a href="#features" class="text-white">Features</a></li>
+                        <!-- <li class="mb-2"><a href="#features" class="text-white">Features</a></li> -->
                         <li class="mb-2"><a href="#instructors" class="text-white">Instructors</a></li>
                         <li class="mb-2"><a href="#contact" class="text-white">Contact</a></li>
                     </ul>

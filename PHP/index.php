@@ -1,251 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICET Computer Institute</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            background-color: #f8f9fa;
-            padding: 20px 0;
-            border-bottom: 1px solid #dee2e6;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-            color: #333;
-        }
-        .course-card {
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-        .course-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .course-title {
-            font-weight: bold;
-            color: #0d6efd;
-            margin-bottom: 10px;
-        }
-        .highlight {
-            background-color: #fff8e1;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin-bottom: 20px;
-        }
-        .footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            margin-top: 30px;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .check-icon {
-            color: #28a745;
-            margin-right: 5px;
-        }
-        .bullet-point {
-            color: #0d6efd;
-            margin-right: 5px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="logo">ICET Computer Institute</div>
-                    <div>Registration No WC 1191</div>
-                    <div>Web: icet500.net</div>
+<?php include 'includes/header.php'; ?>
+
+<!-- Hero Section -->
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to ICET Computer Institute</h1>
+        <p class="lead">Government Registered ICT Training Centre in Sri Lanka</p>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Courses</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Diploma in Computer Application</h5>
+                        <p class="card-text">A complete course on basic computer applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Design & Development</h5>
+                        <p class="card-text">Learn HTML, CSS, JavaScript, and PHP with real projects.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Graphic Designing</h5>
+                        <p class="card-text">Master Photoshop, Illustrator, and other design tools.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Main Content -->
-    <div class="container mt-4">
-        <!-- Introduction Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">Welcome to ICET Computer Institute</h4>
-                <div class="highlight">
-                    <p><i class="fas fa-check-circle check-icon"></i> We offer 5 main courses</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Courses for school students</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Courses for university students</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Courses for working professionals</p>
-                </div>
-            </div>
-        </div>
+<!-- Contact Us Section -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Phone: 077-1234567 | Email: info@icet.lk</p>
+        <p>Address: No.123, Main Street, Colombo, Sri Lanka</p>
+    </div>
+</section>
 
-        <!-- Main Courses Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">Our Main Courses</h4>
-                <p>We offer 5 main courses:</p>
-                <ol>
-                    <li>Diploma Level Microsoft Office</li>
-                    <li>Diploma Level Computerized Accounting</li>
-                    <li>Certificate Level Artificial Intelligence (with Practical applications)</li>
-                    <li>Certificate Level Web Development</li>
-                    <li>Certificate Level HRM</li>
-                </ol>
-                <p><i class="fas fa-check-circle check-icon"></i> These 5 courses are designed to provide comprehensive knowledge and practical skills.</p>
-            </div>
-        </div>
-
-        <!-- IT Courses Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">IT Courses</h4>
-                <div class="highlight">
-                    <p><i class="fas fa-arrow-right bullet-point"></i> We offer 5 IT courses</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Courses designed for current IT industry needs</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> NVQ3, NVQ4 level IT qualifications</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Practical IT skills development</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> 12 model papers provided for exam preparation</p>
-                </div>
-                <p>Our IT courses help students gain practical IT skills and prepare for NVQ3, NVQ4 IT qualifications.</p>
-            </div>
-        </div>
-
-        <!-- Course Fees Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">Course Fees</h4>
-                <div class="highlight">
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Standard course fee: Rs. 450 (For courses like MS Office, Computerized Accounting, etc.)</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> Artificial Intelligence (Practical applications) fee: Rs. 100</p>
-                    <p><i class="fas fa-arrow-right bullet-point"></i> YouTube channel available for additional learning resources</p>
-                </div>
-                <p>We offer courses in Java Programming, Python Programming, Artificial Intelligence, Database SQL, Web Development, Computerized Accounting, MS Office, Graphic Design at Rs. 450 fee.</p>
-            </div>
-        </div>
-
-        <!-- English Courses Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">English & IT Courses</h4>
-                <p>We offer English language courses with Sinhala explanations to help students improve their English for IT studies.</p>
-                <p>University students can learn Java, Advanced Python, Database SQL, Web Development through our courses.</p>
-            </div>
-        </div>
-
-        <!-- Course Content Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">Course Content</h4>
-                <p>We offer 5 courses out of 9 main categories:</p>
-                
-                <div class="row">
-                    <!-- Course 1 -->
-                    <div class="col-md-4">
-                        <div class="course-card">
-                            <div class="course-title">Course 1: Diploma in Microsoft Office</div>
-                            <ul>
-                                <li>Ms Excel</li>
-                                <li>Ms Word</li>
-                                <li>Ms Power point</li>
-                                <li>Ms Access</li>
-                                <li>Database Management</li>
-                                <li>Windows</li>
-                                <li>Internet/E mail</li>
-                                <li>Information Technology</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Course 2 -->
-                    <div class="col-md-4">
-                        <div class="course-card">
-                            <div class="course-title">Course 2: Diploma in Computerized Accounting</div>
-                            <ul>
-                                <li>M.Y.O.B</li>
-                                <li>Quick Book</li>
-                                <li>Accpac</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Course 3 -->
-                    <div class="col-md-4">
-                        <div class="course-card">
-                            <div class="course-title">Course 3: Certificate in Graphic Design</div>
-                            <ul>
-                                <li>Adobe Photoshop</li>
-                                <li>Adobe Illustrator</li>
-                                <li>Adobe InDesign</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row mt-3">
-                    <!-- Course 4 -->
-                    <div class="col-md-4">
-                        <div class="course-card">
-                            <div class="course-title">Course 4: Artificial Intelligence</div>
-                            <p>With Ms Office & Python (Practical with 100 Business Applications)</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Course 5 -->
-                    <div class="col-md-4">
-                        <div class="course-card">
-                            <div class="course-title">Course 5: Certificate in Web Development</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Course 6 -->
-                    <div class="col-md-4">
-                        <div class="course-card">
-                            <div class="course-title">Course 6: Certificate in Python Programming</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pre-University Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">First Time in Sri Lanka - IT for Pre-University Students</h4>
-                <div class="highlight">
-                    <p>Course No 2 - 4 courses designed for university students</p>
-                    <p>Foundation in:</p>
-                    <ul>
-                        <li>Business Management</li>
-                        <li>Business Science</li>
-                        <li>Data science</li>
-                        <li>Software Engineering</li>
-                        <li>Computer Science</li>
-                        <li>Business Information Systems</li>
-                        <li>Engineering</li>
-                        <li>Bio science</li>
-                    </ul>
-                    <p>Duration: 7 months</p>
-                    <p>Fees: Rs. 1,400 (Rs. 400 per month)</p>
-                    <p>Medium: English & Sinhala</p>
-                    <p>Delivery: Online</p>
-                    <p><i class="fas fa-check-circle check-icon"></i> Course duration can be adjusted based on student needs.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Practical IT Section -->
-        <div class="row mb-4">
-            <div class="col-md-12">
-                <h4 class="text-center mb-3">Practical IT Skills</
+<?php include 'includes/footer.php'; ?>
