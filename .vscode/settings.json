@@ -3,7 +3,7 @@
     "window.zoomLevel": 1,
     "peacock.color": "YELLOW",
     "files.autoSave": "afterDelay",
-    "liveServer.settings.port": 5501,
+    "liveServer.settings.port": 5502,
     "cmake.sourceDirectory": "E:/Users/Public/Github_2024/PyranRanjith/GitHub/Flutter-Firebas/Flutter-Firebase-Model_1/linux",
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#ffff33",
